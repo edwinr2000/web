@@ -42,6 +42,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
         .images img {
             width: 200px;
@@ -52,6 +53,7 @@
         .text-image {
             margin-top: 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             animation: fadeIn 6s ease-in;
@@ -89,6 +91,14 @@
             font-size: 16px;
             margin: 5px 0;
         }
+        @media (max-width: 768px) {
+            .images {
+                flex-direction: column;
+            }
+            .text-image {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body class="star-bg">
@@ -113,8 +123,8 @@
         <img src="perritotib.jpg" alt="Perrito Tiburón">
     </div>
     <div class="text-image">
-        <img src="michiburg.jpg" alt="Michi Hamburguesa">
         <p>Y también te seguiría amando... así despertaras siendo una michi hamburguesa</p>
+        <img src="michiburg.jpg" alt="Michi Hamburguesa">
     </div>
     <div class="final-message">
         <p>Feliz cumpleaños número 29, feliz vuelta al sol, pásala bien, te amo muchísimoooo, atentamente tu niño peleón</p>
