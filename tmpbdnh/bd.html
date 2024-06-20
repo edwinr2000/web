@@ -20,10 +20,18 @@
             text-align: center;
             padding: 20px;
             animation: fadeIn 2s ease-in;
+            overflow: auto; /* Allow scrolling */
+            position: relative; /* Ensure that child elements can be positioned relative to the body */
         }
         h1 {
             color: #ffdc00;
             animation: slideIn 2s ease-in;
+            position: relative;
+            z-index: 2; /* Ensure content is above the stars */
+        }
+        .messages, .images, .text-image, .final-message, .curious-facts {
+            position: relative;
+            z-index: 2; /* Ensure content is above the stars */
         }
         .messages {
             margin-top: 20px;
@@ -70,7 +78,30 @@
             animation: fadeIn 7s ease-in;
         }
         .star-bg {
-            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            position: fixed; /* Make sure the stars are fixed to the background */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1; /* Ensure that the star-bg is below the content */
+            pointer-events: none; /* Ensure stars don't block content interaction */
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(-100vh) translateX(-100vw);
+            }
         }
         .curious-facts {
             margin-top: 30px;
@@ -101,7 +132,13 @@
         }
     </style>
 </head>
-<body class="star-bg">
+<body>
+    <audio id="background-audio" loop>
+        <source src="felizcumplemiJuli.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <div class="star-bg"></div>
     <h1>Feliz cumpleaños Julián, mi amorcito hermoso 💖</h1>
     <div class="messages">
         <p>Feliz cumpleaños a la persona más maravillosa del mundo. Feliz cumpleaños, mi amor.✨</p>
@@ -152,5 +189,35 @@
             <p>Mi niño hermoso está creciendoo 👨‍❤️‍💋‍👨😘</p>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const starBg = document.querySelector('.star-bg');
+            const audio = document.getElementById('background-audio');
+            audio.play().catch(error => {
+                console.log('Reproducción automática bloqueada:', error);
+                // Opción: Mostrar un botón para reproducir manualmente
+                let playButton = document.createElement('button');
+                playButton.innerHTML = 'Reproducir música';
+                playButton.style.position = 'fixed';
+                playButton.style.top = '20px';
+                playButton.style.right = '20px';
+                playButton.addEventListener('click', () => {
+                    audio.play();
+                    playButton.style.display = 'none';
+                });
+                document.body.appendChild(playButton);
+            });
+
+            for (let i = 0; i < 100; i++) {
+                let star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.animationDuration = Math.random() * 5 + 5 + 's';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                starBg.appendChild(star);
+            }
+        });
+    </script>
 </body>
 </html>
