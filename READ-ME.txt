@@ -1,11 +1,34 @@
-  =>  Template Name    : DevFolio - Developer Portfolio Template
+# Edwin Oswaldo Torres – Developer Portfolio
 
-  =>  Template Link    : https://htmlcodex.com/developer-portfolio-template
+This is my personal developer portfolio website, showcasing my background, skills, in the fields of data engineering and business intelligence.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+## 🧑 About Me
 
-  =>  Template Author  : HTML Codex
+My name is **Edwin Oswaldo Torres**, a Systems Engineering graduate with a strong foundation in database analysis and design. I have experience working with SQL Server, SSIS, SSAS, SSRS, Azure DevOps, and Power BI, developing end-to-end data solutions that support strategic decision-making.
 
-  =>  Author Website   : https://htmlcodex.com
+## 🌐 Live Portfolio
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+You can view the live version of this website at:  
+[**[https://edwinr2000.github.io/web/](https://edwinr2000.github.io/web/)**]
+
+## 🚀 Features
+
+- Responsive and modern design
+- Sections for About, Skills, Services, Portfolio, and Contact
+- Clean HTML/CSS structure
+- Easy to customize and deploy
+
+## 📄 Resume
+
+My resume is included on the site under the "About" section and available for download. It outlines my academic background, technical expertise, and professional experience.
+
+## 📦 Template Information
+
+This website is based on the following free template:
+
+- **Template Name**: DevFolio – Developer Portfolio Template  
+- **Template Link**: [https://htmlcodex.com/developer-portfolio-template](https://htmlcodex.com/developer-portfolio-template)  
+- **Template License**: [https://htmlcodex.com/license](https://htmlcodex.com/license) or refer to the LICENSE.txt file  
+- **Template Author**: HTML Codex  
+- **Author Website**: [https://htmlcodex.com](https://htmlcodex.com)  
+- **About HTML Codex**: HTML Codex is a leading creator and publisher of free HTML templates, landing pages, email templates, and HTML snippets. Learn more at [https://htmlcodex.com/about-us](https://htmlcodex.com/about-us)
